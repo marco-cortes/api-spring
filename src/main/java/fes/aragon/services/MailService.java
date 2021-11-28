@@ -21,7 +21,7 @@ public class MailService {
 		    Email to = new Email(email);
 		    Content content = new Content("text/plain", "¡Gracias por registrarte, saludos!");
 		    Mail mail = new Mail(from, subject, to, content);
-		    SendGrid sg = new SendGrid("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");
+		    SendGrid sg = new SendGrid("");
 		    Request request = new Request();
 		    try {
 		      request.setMethod(Method.POST);
