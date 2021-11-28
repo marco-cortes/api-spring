@@ -16,12 +16,12 @@ import com.sendgrid.helpers.mail.objects.Email;
 public class MailService {
 	
 	public String sendTextEmail(String email) throws IOException {
-		    Email from = new Email("marcocortes84@aragon.unam.mx");
+		    Email from = new Email("EMAIL");
 		    String subject = "Bienvenido!";
 		    Email to = new Email(email);
 		    Content content = new Content("text/plain", "¡Gracias por registrarte, saludos!");
 		    Mail mail = new Mail(from, subject, to, content);
-		    SendGrid sg = new SendGrid("");
+		    SendGrid sg = new SendGrid("KEY");
 		    Request request = new Request();
 		    try {
 		      request.setMethod(Method.POST);
